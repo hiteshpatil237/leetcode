@@ -30,8 +30,9 @@ class CustomStack(object):
         :type val: int
         :rtype: None
         """
-        k = self.maxSize if k > self.maxSize else k
-        for i in range(k):
+        j = min(k, len(self.stack))
+
+        for i in range(j):
             self.stack[i] += val
         
 
